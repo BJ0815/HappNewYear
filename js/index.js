@@ -49,7 +49,7 @@ $(function () {
     // particleImages[2].src = "./images/snow3.png";
     // particleImages[3].src = "./images/snow4.png";
     // particleImages[4].src = "./images/snow5.png";
-    particleImages[0].src = "img/151375665240370100.png";
+    particleImages[0].src = "img/cloud.png";
     particleImages[1].src = "img/151375668550091372.png";
     particleImages[2].src = "img/151375669416355455.png";
     particleImages[3].src = "img/151375670204115466.png";
@@ -79,7 +79,8 @@ $(function () {
         document.addEventListener("mousemove", onDocumentMouseMove, false);
         document.addEventListener("touchstart", onDocumentTouchStart, false);
         document.addEventListener("touchmove", onDocumentTouchMove, false);
-        setInterval(loop, 1000 / 50)
+        // setInterval(loop, 1000 / 50)
+        loop()
     }
 
     function onDocumentMouseMove(event) {
@@ -141,6 +142,7 @@ $(function () {
         camera.position.y += (-mouseY - camera.position.y) * 0.005;
         camera.lookAt(scene.position);
         renderer.render(scene, camera)
+        requestAnimationFrame(loop)
     }
 
     function process() {

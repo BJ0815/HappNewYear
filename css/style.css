@@ -47,7 +47,10 @@ body{
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    font-size: 3rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .step .step1{
     -webkit-animation: stepOne .5s normal forwards ease-in-out;
@@ -209,6 +212,10 @@ h2{
     width: inherit;
     height: inherit;
     position: relative;
+    display: none;
+}
+.init .loading-box {
+    display: block;
 }
 
 .loading-page .icon {
